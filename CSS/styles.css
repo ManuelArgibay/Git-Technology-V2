@@ -1,0 +1,248 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.contenedor{ 
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 55vh 50vh 100vh 27vh;
+    grid-template-areas: 
+    "header"
+    "inicio"
+    "productos"
+    "nosotros"
+    "footer"
+    ;
+}
+
+
+/* Comienzo Header */
+
+header{
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    background-color: aqua;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+    background-image: url(./Imagenes/Logo\ GIT.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: Oswald, sans-serif;
+    color: black;
+}
+
+header ul :hover{
+    font-size: 3.5vh;
+    text-decoration: underline;
+    transition: all 2s;
+}
+
+/* Fin Header */
+
+
+/* Comienzo Inicio */
+
+.inicio{
+    grid-area: inicio;
+    overflow: hidden;
+}
+
+/* Fin Inicio */
+
+
+/* Comienzo Productos */
+
+.explora_productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-area: productos;
+    background-image: url(./Imagenes/Fondo\ Explora\ Productos.jpeg);
+}
+
+.explora{
+    height: 22%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.explora h2{
+    color: white;
+    font-size: 5vh;
+    font-family: Oswald, sans-serif;
+}
+
+.productos{
+    width: 100%;
+    height: 78%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.productos img{
+    height: 32vh;
+}
+
+.productos a :hover{
+    transform: scale(1.10);
+    transition: all 2s;
+}
+
+/* Fin Productos */
+
+
+/* Comienzo Nosotros */
+
+.nosotros{
+    grid-area: nosotros;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./Imagenes/Fondo\ Sobre\ Nosotros.jpg);
+    /* background-size: cover; */
+    background-size: cover;
+    background-position: center;
+}
+
+.titulo_nosotros{
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.titulo_nosotros h2{
+    text-align: center;
+    font-size: 15vh;
+    color: white;
+    font-family: Dongle, sans-serif;
+}
+
+.parrafo_nosotros{
+    display: flex;
+    height: 75vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parrafo_nosotros p{
+    padding: 0vh 10vh;
+    font-size: 5vh;
+    color: white;
+    font-family: Dongle, sans-serif;
+}
+
+
+/* Fin Nosotros */
+
+
+/* Comienzo Footer */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 89, 255);
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 20%;
+    height: 80%;
+    /* width: 20%; */
+    /* padding: 0vh 5vh; */
+}
+
+
+.footer1 h3{
+    font-size: 3vh;
+    text-decoration: underline;
+    color: white;
+}
+
+.footer1 h5{
+    text-decoration: none;
+    padding: 0.25vh 0vh;
+    font-size: 2.5vh;
+    color: white;
+}
+
+.footer1 a{
+    text-decoration: none;
+}
+
+.footer1 a :hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.formulario{
+    height: 80%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.redes{
+    height: 20%;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    /* background-color: azure; */
+}
+
+.redes img{
+    height: 4vh;
+}
+
+.redes a :hover{
+    border: 2px solid rgb(158, 158, 158);
+    border-radius: 4vh;
+}
+
+/* Fin Footer */
