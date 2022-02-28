@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 150vh 35vh;
+    grid-template-areas: 
+    "header"
+    "contacto"
+    "footer";
+}
+
+/* Comienzo Header */
+
+header{
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: Oswald, sans-serif;
+    color: black;
+}
+
+header ul :hover{
+    font-size: 3.5vh;
+    text-decoration: underline;
+    transition: all 2s;
+}
+
+/* Fin Header */
+
+
+/* Comienzo Contacto */
+
+.contacto{
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./Imagenes/Fondo\ Contacto.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contacto form{ 
+    border: 1px solid black;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.contacto form h1{
+    font-size: 160%;
+    color: white;
+    text-align: center;
+}
+
+/* Fin Contacto */
+
+
+/* Comienzo Footer */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(0, 89, 255);
+}
+
+.footer{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 20%;
+    height: 80%;
+    /* width: 20%; */
+    /* padding: 0vh 5vh; */
+}
+
+
+.footer1 h3{
+    font-size: 3vh;
+    text-decoration: underline;
+    color: white;
+}
+
+.footer1 h5{
+    text-decoration: none;
+    padding: 0.25vh 0vh;
+    font-size: 2.5vh;
+    color: white;
+}
+
+.footer1 a{
+    text-decoration: none;
+}
+
+.footer1 a :hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.formulario{
+    height: 80%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.redes{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* background-color: azure; */
+}
+
+.redes img{
+    height: 6vh;
+}
+
+.redes a :hover{
+    border: 2px solid rgb(158, 158, 158);
+    border-radius: 4vh;
+}
+
+/* Fin Footer */
