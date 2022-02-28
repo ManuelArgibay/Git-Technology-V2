@@ -26,7 +26,7 @@ html{
 
 header{
     display: flex;
-    grid-area: header;
+    grid-area: "header";
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -88,7 +88,7 @@ header ul :hover{
 /* Comienzo Inicio */
 
 .inicio{
-    grid-area: inicio;
+    grid-area: "inicio";
     overflow: hidden;
 }
 
@@ -101,7 +101,7 @@ header ul :hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    grid-area: productos;
+    grid-area: "productos";
     background-image: url(./Imagenes/Fondo\ Explora\ Productos.jpeg);
 }
 
@@ -273,7 +273,7 @@ footer{
 
 @media only screen and (max-width: 767px ){
 
-    .contenedor{ 
+    #contenedor{ 
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 40px 86px 150vh 300px 170px;
@@ -290,11 +290,11 @@ footer{
     /* Comienzo Header */
 
     header{
-        background-color: white;
+        background-color: rgb(255, 255, 255);
     }
 
     .logo{
-        width: 10%;
+        width: 20%;
         height: 100%;
     }
 
@@ -406,6 +406,141 @@ footer{
 
     /* Fin Footer */
 
-
 }
 
+
+/* Media Querie 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px ){
+
+    #contenedor{ 
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 70px 200px 35vh 400px 160px;
+        grid-template-areas: 
+        "header"
+        "inicio"
+        "productos"
+        "nosotros"
+        "footer"
+        ;
+    }
+
+
+    /* Comienzo Header */
+
+    header{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .logo{
+        width: 15%;
+        height: 100%;
+    }
+
+    .nav{
+        width: 85%;
+        height: 100%;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .nav ul li{
+        font-size: 14px;
+    }
+
+    header ul :hover{
+        font-size: none;
+        text-decoration: none;
+        transition: all 2s;
+    }
+
+    /* Fin Header */
+
+
+    /* Comienzo Productos */
+
+    .explora{    
+        align-items: flex-end;
+        height: 40%;
+    }
+    
+    .explora h2{
+        font-size: 180%;
+    }
+    
+    .productos{
+        height: 80%;
+        flex-direction: row;
+    }
+    
+    .productos img{
+        height: 15vh;
+    }
+    
+    /* Fin Productos */
+
+
+    /* Comienzo Nosotros */
+
+    .titulo_nosotros{
+        height: 30%;
+    }
+
+    .titulo_nosotros h2{
+        font-size: 400%;
+    }
+
+    .parrafo_nosotros{
+        height: 80%;
+    }
+
+    .parrafo_nosotros p{
+        font-size: 100%;
+        padding: 0vh 10%;
+    }
+
+    /* Fin Nosotros */
+
+
+    /* Comienzo Footer */
+
+    .footer1{
+        height: 90%;
+    }
+
+    .footer1 h3{
+        font-size: 90%;
+    }
+
+    .footer1 h5{
+        font-size: 70%;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        height: 45px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .enviar{
+        height: 15px;
+        width: 40px;
+        font-size: 8px;
+    }
+
+    .email{
+        height: 15px;
+        width: 150px;
+        font-size: 8px;
+    }
+
+    .redes img{
+        height: 20px;
+    }
+
+    /* Fin Footer */
+
+}
