@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+#contenedor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 75vh 300vh 35vh;
+    grid-template-areas: 
+    "header"
+    "inicio"
+    "hardware"
+    "footer";
+}
+
+
+/* Comienzo Header */
+
+header{
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.nav{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    & ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;        
+        & li{
+            display: inline-block;
+            list-style: none;
+            font-size: 3vh;
+            font-weight: bold;
+            font-family: Oswald, sans-serif;
+            color: black;
+        }
+        & :hover{
+            font-size: 3.5vh;
+            text-decoration: underline;
+            transition: all 2s;
+        }
+    }
+}
+
+/* Fin Header */
+
+/* Comienzo Hardware*/
+    .inicio{
+        grid-area: "inicio";
+        width: 100%;
+        height: 100%;
+        // overflow: hidden;
+        // background-color: red;
+    }
+/* Fin Hardware*/
+
+/* Comienzo Hardware*/
+
+#hardware{
+    grid-area: "hardware";
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.6fr 1fr 1fr 1fr 1fr;
+    grid-area: "titulo" "seccion1" "seccion2" "seccion3" "seccion4";
+    background-image: url(./Imagenes/Fondo\ Hardware\ Productos.svg);
+    background-size: cover;
+}
+
+.texto{
+    grid-area: "titulo";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h2{
+        font-size: 3vw;
+        font-family: Oswald, sans-serif;
+        color: white;
+    }
+}
+
+.seccion1{
+    grid-area: "seccion1";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    & div{
+        height: 40vh;
+        width: 40vh;
+        background-color: red;
+    }
+}
+
+.seccion2{
+    grid-area: "seccion2";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    & div{
+        height: 40vh;
+        width: 40vh;
+        background-color: red;
+    }
+}
+
+.seccion3{
+    grid-area: "seccion3";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    & div{
+        height: 40vh;
+        width: 40vh;
+        background-color: red;
+    }
+}
+
+.seccion4{
+    grid-area: "seccion4";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    & div{
+        height: 40vh;
+        width: 40vh;
+        background-color: red;
+    }
+}
+
+/* Fin Hardware*/
+
+
+/* Comienzo Footer */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(0, 89, 255);
+}
+
+.footer{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 20%;
+    height: 80%;
+    & h3{
+        font-size: 3vh;
+        text-decoration: underline;
+        color: white;
+    }
+    & h5{
+        text-decoration: none;
+        padding: 0.25vh 0vh;
+        font-size: 2.5vh;
+        color: white;
+    }
+    & a{
+        text-decoration: none;
+        & :hover{
+            text-decoration: underline;
+            text-decoration-color: white;
+        }
+    }
+}
+
+.formulario{
+    height: 80%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.redes{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    & img{
+        height: 6vh;
+    }
+    & a :hover{
+        border: 2px solid rgb(158, 158, 158);
+        border-radius: 4vh;
+    }
+}
+
+/* Fin Footer */
