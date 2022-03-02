@@ -142,10 +142,39 @@
     justify-content: space-evenly;
     align-items: center;
   }
-  .seccion1 div {
+
+  @mixin sizes($width, $height, $bcolor){
+    height: $height;
+    width: $width;
+    background-color: $bcolor;
+  }
+
+  // $item:  (
+  //   tamano1: 15px
+  //   tamano2: 20px
+  //   tamano3: 25px
+  // );
+
+  @each $tamano in list {
+    .item#{tamano}{
+      font-size: $tamano;
+    }
+  }
+
+  .item{
+    display: flex;
     height: 40vh;
     width: 40vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     background-color: red;
+  }
+
+  .item12{
+    @extend .item;
+    border: 10px solid black;
+    @include sizes(30vh, 30vh, orange)
   }
   
   .seccion2 {
@@ -155,11 +184,6 @@
     justify-content: space-evenly;
     align-items: center;
   }
-  .seccion2 div {
-    height: 40vh;
-    width: 40vh;
-    background-color: red;
-  }
   
   .seccion3 {
     grid-area: "seccion3";
@@ -168,11 +192,6 @@
     justify-content: space-evenly;
     align-items: center;
   }
-  .seccion3 div {
-    height: 40vh;
-    width: 40vh;
-    background-color: red;
-  }
   
   .seccion4 {
     grid-area: "seccion4";
@@ -180,11 +199,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-  }
-  .seccion4 div {
-    height: 40vh;
-    width: 40vh;
-    background-color: red;
   }
   
   /* Fin Hardware*/
@@ -262,50 +276,372 @@
 
   // Media Querie 320px
 
-  @media only screen and (max-width: 767px ){
-
-    #contenedor{
-      grid-template-rows: 40px;
+  @media only screen and (max-width: 767px) {
+    
+    #contenedor {
+      grid-template-rows: 40px 118px 100vh 170px;
     }
-
-
-  /* Comienzo Header */
-
-  header{
-    background-color: rgb(255, 255, 255);
+  
+    /* Comienzo Header */
+    header {
+      background-color: white;
+    }
+  
+    .logo {
+      width: 20%;
+      height: 100%;
+    }
+  
+    .logo img {
+      width: 80%;
+      height: 50%;
+    }
+  
+    .nav {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      background-color: white;
+    }
+  
+    .nav ul {
+      width: 100%;
+    }
+  
+    .nav ul li {
+      font-size: 5px;
+    }
+  
+    header ul :hover{
+      text-decoration: none;
+      transition: all 2s;
+    }
+  
+    /* Fin Header */
+  
+  
+    /* Comienzo Inicio */
+  
+    .titulo{
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      height: 80px;
+      width: 50%;
+      /* background-color: red; */
+    }
+  
+    .titulo h1{
+      height: 10%;
+      width: 95%;
+      font-size: 15px;
+      align-items: center;
+      /* background-color: beige; */
+    }
+  
+    .titulo h1 span{
+      font-size: 16px;
+    }
+  
+    /* Fin Inicio */
+  
+  
+    /* Comienzo Productos */
+  
+    #streaming {
+      grid-area: "streaming";
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+      grid-area: "titulo" "seccion1" "seccion2" "seccion3" "seccion4";
+      background-image: url(./Imagenes/Fondo\ Hardware\ Productos.svg);
+      background-size: cover;
+    }
+  
+    .texto {
+      grid-area: "titulo";
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      /* background-color: #0059ff; */
+    }
+  
+    .texto h2 {
+      font-size: 15px;
+      font-family: Oswald, sans-serif;
+      color: white;
+    }
+  
+    .seccion1 {
+      grid-area: "seccion1";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .item{
+      height: 10vh;
+      width: 10vh;
+      background-color: red;
+      font-size: 10px;
+    }
+  
+    .seccion2 {
+      grid-area: "seccion2";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .seccion3 {
+      grid-area: "seccion3";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .seccion4 {
+      grid-area: "seccion4";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    /* Fin Productos */
+  
+  
+    /* Comienzo Footer */
+  
+    .footer1{
+      height: 90%;
+    }
+  
+    .footer1 h3{
+      font-size: 75%;
+    }
+  
+    .footer1 h5{
+      font-size: 50%;
+    }
+      
+    form{
+      display: flex;
+      flex-direction: column;
+      height: 45px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .formulario form input{
+      height: 15px;
+      width: 70px;
+      font-size: 8px;
+    }
+  
+    .redes img{
+      height: 20px;
+    }
+  
+    /* Fin Footer */
+  
   }
-
-  .logo{
-    width: 20%;
-    height: 100%;
+  
+  
+  /* Media Querie 768px */
+  
+  @media only screen and (min-width: 768px) and (max-width: 1023px ){
+  
+    #contenedor {
+      grid-template-rows: 70px 285px 200vh 160px;
+    }
+  
+  
+    /* Comienzo Header */
+  
+    header{
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .logo{
+      width: 15%;
+      height: 100%;
+    }
+  
+    .nav{
+      width: 85%;
+      height: 100%;
+      display: flex;
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .nav ul li{
+      font-size: 14px;
+    }
+  
+    header ul :hover{
+      font-size: none;
+      text-decoration: none;
+      transition: all 2s;
+    }
+  
+    /* Fin Header */
+  
+  
+    /* Comienzo Inicio */
+  
+    .titulo{
+      position: absolute;
+      top: 70px;
+      left: 60px;
+      height: 190px;
+      width: 50%;
+      /* background-color: red; */
+    }
+  
+    .titulo h1{
+      height: 10%;
+      width: 90%;
+      font-size: 35px;
+      align-items: center;
+      /* background-color: beige; */
+    }
+  
+    .titulo h1 span{
+      font-size: 40px;
+    }
+  
+    /* Fin Inicio */
+  
+  
+    /* Comienzo Productos */
+  
+    #streaming {
+      grid-area: "streaming";
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+      grid-area: "titulo" "seccion1" "seccion2" "seccion3" "seccion4";
+      background-image: url(./Imagenes/Fondo\ Hardware\ Productos.svg);
+      background-size: cover;
+    }
+  
+    .texto {
+      grid-area: "titulo";
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      /* background-color: #0059ff; */
+    }
+  
+    .texto h2 {
+      font-size: 30px;
+      font-family: Oswald, sans-serif;
+      color: white;
+    }
+  
+    .seccion1 {
+      grid-area: "seccion1";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .item{
+      height: 20vw;
+      width: 20vw;
+      background-color: red;
+      font-size: 20px;
+    }
+  
+    .seccion2 {
+      grid-area: "seccion2";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .seccion3 {
+      grid-area: "seccion3";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .seccion4 {
+      grid-area: "seccion4";
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    /* Fin Productos */
+  
+  
+    /* Comienzo Footer */
+  
+    .footer1{
+      height: 90%;
+    }
+  
+    .footer1 h3{
+      font-size: 90%;
+    }
+  
+    .footer1 h5{
+      font-size: 70%;
+    }
+      
+    form{
+      display: flex;
+      flex-direction: column;
+      height: 45px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .enviar{
+      height: 15px;
+      width: 40px;
+      font-size: 8px;
+    }
+  
+    .email{
+      height: 15px;
+      width: 150px;
+      font-size: 8px;
+    }
+  
+    .redes img{
+      height: 20px;
+    }
+  
+    /* Fin Footer */
   }
-
-  .logo img{
-    width: 80%;
-    height: 50%;
-  }
-
-  .nav{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-  }
-
-  .nav ul{
-    width: 100%;
-  }
-
-  .nav ul li{
-    font-size: 5px;
-  }
-
-  header ul :hover{
-    font-size: none;
-    text-decoration: none;
-  }
-
-  /* Fin Header */
-
-
-}

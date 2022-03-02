@@ -68,13 +68,13 @@ header {
 }
 
 .nav ul :hover {
-  /* font-size: 3.5vh; */
+  font-size: 3.5vh;
   text-decoration: underline;
   transition: all 2s;
 }
 
 /* Fin Header */
-/* Comienzo Inicio*/
+/* Comienzo Hardware*/
 .inicio {
   grid-area: "inicio";
   width: 100%;
@@ -83,14 +83,16 @@ header {
 
 .titulo {
   width: 70%;
-  height: 80vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 20vh;
   left: 0vw;
+  height: 75vh;
   z-index: 40;
+  /* background-color: red; */
 }
 
 .titulo h1 {
@@ -109,7 +111,7 @@ header {
   font-family: "Russo One", sans-serif;
 }
 
-/* Fin Inicio*/
+/* Fin Hardware*/
 /* Comienzo Hardware*/
 #hardware {
   grid-area: "hardware";
@@ -146,10 +148,25 @@ header {
   align-items: center;
 }
 
-.seccion1 div {
+.itemtamano {
+  font-size: list;
+}
+
+.item, .item12 {
+  display: flex;
   height: 40vh;
   width: 40vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
   background-color: red;
+}
+
+.item12 {
+  border: 10px solid black;
+  height: 30vh;
+  width: 30vh;
+  background-color: orange;
 }
 
 .seccion2 {
@@ -160,12 +177,6 @@ header {
   align-items: center;
 }
 
-.seccion2 div {
-  height: 40vh;
-  width: 40vh;
-  background-color: red;
-}
-
 .seccion3 {
   grid-area: "seccion3";
   display: flex;
@@ -174,24 +185,12 @@ header {
   align-items: center;
 }
 
-.seccion3 div {
-  height: 40vh;
-  width: 40vh;
-  background-color: red;
-}
-
 .seccion4 {
   grid-area: "seccion4";
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.seccion4 div {
-  height: 40vh;
-  width: 40vh;
-  background-color: red;
 }
 
 /* Fin Hardware*/
@@ -269,10 +268,7 @@ footer {
 }
 
 /* Fin Footer */
-
 /*# sourceMappingURL=hardware.css.map */
-
-
 @media only screen and (max-width: 767px) {
   #contenedor {
     grid-template-rows: 40px 118px 100vh 170px;
@@ -308,26 +304,23 @@ footer {
     font-size: 5px;
   }
 
-  header ul :hover{
+  header ul :hover {
     text-decoration: none;
     transition: all 2s;
   }
 
   /* Fin Header */
-
-
   /* Comienzo Inicio */
-
-  .titulo{
+  .titulo {
     position: absolute;
     top: 40px;
     left: 30px;
-    height: 100px;
+    height: 80px;
     width: 50%;
     /* background-color: red; */
   }
 
-  .titulo h1{
+  .titulo h1 {
     height: 10%;
     width: 95%;
     font-size: 15px;
@@ -335,17 +328,14 @@ footer {
     /* background-color: beige; */
   }
 
-  .titulo h1 span{
+  .titulo h1 span {
     font-size: 16px;
   }
 
   /* Fin Inicio */
-
-
   /* Comienzo Productos */
-
-  #hardware {
-    grid-area: "hardware";
+  #streaming {
+    grid-area: "streaming";
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
@@ -380,10 +370,11 @@ footer {
     align-items: center;
   }
 
-  .seccion1 div {
+  .item, .item12 {
     height: 10vh;
     width: 10vh;
     background-color: red;
+    font-size: 10px;
   }
 
   .seccion2 {
@@ -396,12 +387,6 @@ footer {
     align-items: center;
   }
 
-  .seccion2 div {
-    height: 10vh;
-    width: 10vh;
-    background-color: red;
-  }
-
   .seccion3 {
     grid-area: "seccion3";
     width: 100%;
@@ -410,12 +395,6 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-  }
-
-  .seccion3 div {
-    height: 10vh;
-    width: 10vh;
-    background-color: red;
   }
 
   .seccion4 {
@@ -428,30 +407,21 @@ footer {
     align-items: center;
   }
 
-  .seccion4 div {
-    height: 10vh;
-    width: 10vh;
-    background-color: red;
-  }
-
   /* Fin Productos */
-
-
   /* Comienzo Footer */
-
-  .footer1{
+  .footer1 {
     height: 90%;
   }
 
-  .footer1 h3{
+  .footer1 h3 {
     font-size: 75%;
   }
 
-  .footer1 h5{
+  .footer1 h5 {
     font-size: 50%;
   }
-    
-  form{
+
+  form {
     display: flex;
     flex-direction: column;
     height: 45px;
@@ -459,73 +429,63 @@ footer {
     justify-content: flex-start;
   }
 
-  .formulario form input{
+  .formulario form input {
     height: 15px;
     width: 70px;
     font-size: 8px;
   }
 
-  .redes img{
+  .redes img {
     height: 20px;
   }
 
   /* Fin Footer */
-
 }
-
-
 /* Media Querie 768px */
-
-@media only screen and (min-width: 768px) and (max-width: 1023px ){
-
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   #contenedor {
     grid-template-rows: 70px 285px 200vh 160px;
   }
 
-
   /* Comienzo Header */
-
-  header{
-    background-color: rgb(255, 255, 255);
+  header {
+    background-color: white;
   }
 
-  .logo{
+  .logo {
     width: 15%;
     height: 100%;
   }
 
-  .nav{
+  .nav {
     width: 85%;
     height: 100%;
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }
 
-  .nav ul li{
+  .nav ul li {
     font-size: 14px;
   }
 
-  header ul :hover{
+  header ul :hover {
     font-size: none;
     text-decoration: none;
     transition: all 2s;
   }
 
   /* Fin Header */
-
-
   /* Comienzo Inicio */
-
-  .titulo{
+  .titulo {
     position: absolute;
     top: 70px;
-    left: 50px;
-    height: 230px;
+    left: 60px;
+    height: 190px;
     width: 50%;
     /* background-color: red; */
   }
 
-  .titulo h1{
+  .titulo h1 {
     height: 10%;
     width: 90%;
     font-size: 35px;
@@ -533,17 +493,14 @@ footer {
     /* background-color: beige; */
   }
 
-  .titulo h1 span{
+  .titulo h1 span {
     font-size: 40px;
   }
 
   /* Fin Inicio */
-
-
   /* Comienzo Productos */
-
-  #hardware {
-    grid-area: "hardware";
+  #streaming {
+    grid-area: "streaming";
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
@@ -578,10 +535,11 @@ footer {
     align-items: center;
   }
 
-  .seccion1 div {
+  .item, .item12 {
     height: 20vw;
     width: 20vw;
     background-color: red;
+    font-size: 20px;
   }
 
   .seccion2 {
@@ -594,12 +552,6 @@ footer {
     align-items: center;
   }
 
-  .seccion2 div {
-    height: 20vw;
-    width: 20vw;
-    background-color: red;
-  }
-
   .seccion3 {
     grid-area: "seccion3";
     width: 100%;
@@ -608,12 +560,6 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-  }
-
-  .seccion3 div {
-    height: 20vw;
-    width: 20vw;
-    background-color: red;
   }
 
   .seccion4 {
@@ -626,30 +572,21 @@ footer {
     align-items: center;
   }
 
-  .seccion4 div {
-    height: 20vw;
-    width: 20vw;
-    background-color: red;
-  }
-
   /* Fin Productos */
-
-
   /* Comienzo Footer */
-
-  .footer1{
+  .footer1 {
     height: 90%;
   }
 
-  .footer1 h3{
+  .footer1 h3 {
     font-size: 90%;
   }
 
-  .footer1 h5{
+  .footer1 h5 {
     font-size: 70%;
   }
-    
-  form{
+
+  form {
     display: flex;
     flex-direction: column;
     height: 45px;
@@ -657,24 +594,23 @@ footer {
     justify-content: flex-start;
   }
 
-  .enviar{
+  .enviar {
     height: 15px;
     width: 40px;
     font-size: 8px;
   }
 
-  .email{
+  .email {
     height: 15px;
     width: 150px;
     font-size: 8px;
   }
 
-  .redes img{
+  .redes img {
     height: 20px;
   }
 
   /* Fin Footer */
 }
-
 
 /*# sourceMappingURL=hardware.css.map */
