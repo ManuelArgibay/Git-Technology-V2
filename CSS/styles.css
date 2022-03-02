@@ -77,7 +77,6 @@ header{
 }
 
 header ul :hover{
-    font-size: 3.5vh;
     text-decoration: underline;
     transition: all 2s;
 }

@@ -1,28 +1,22 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
-}
-
-html{
+  }
+  
+  html {
     scroll-behavior: smooth;
     overflow: auto;
-}
-
-#contenedor{
+  }
+  
+  #contenedor {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 20vh 75vh 300vh 35vh;
-    grid-template-areas: 
-    "header"
-    "inicio"
-    "hardware"
-    "footer";
-}
-
-
-/* Comienzo Header */
-
-header{
+    grid-template-areas: "header" "inicio" "hardware" "footer";
+  }
+  
+  /* Comienzo Header */
+  header {
     display: flex;
     grid-area: header;
     justify-content: space-between;
@@ -31,65 +25,91 @@ header{
     top: 0px;
     left: 0px;
     z-index: 50;
-}
-
-.logo{
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
     overflow: hidden;
     width: 20%;
     height: 100%;
-    & img{
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.nav{
+  }
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav {
     display: flex;
     width: 80%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     align-items: center;
     justify-content: center;
-    & ul{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;        
-        & li{
-            display: inline-block;
-            list-style: none;
-            font-size: 3vh;
-            font-weight: bold;
-            font-family: Oswald, sans-serif;
-            color: black;
-        }
-        & :hover{
-            font-size: 3.5vh;
-            text-decoration: underline;
-            transition: all 2s;
-        }
-    }
-}
-
-/* Fin Header */
-
-/* Comienzo Hardware*/
-    .inicio{
-        grid-area: "inicio";
-        width: 100%;
-        height: 100%;
-        // overflow: hidden;
-        // background-color: red;
-    }
-/* Fin Hardware*/
-
-/* Comienzo Hardware*/
-
-#hardware{
+  }
+  .nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: Oswald, sans-serif;
+    color: black;
+  }
+  .nav ul :hover {
+    font-size: 3.5vh;
+    text-decoration: underline;
+    transition: all 2s;
+  }
+  
+  /* Fin Header */
+  /* Comienzo Hardware*/
+  .inicio {
+    grid-area: "inicio";
+    width: 100%;
+    height: 100%;
+  }
+  
+  .titulo{
+    width: 70%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20vh;
+    left: 0vw;
+    height: 75vh;
+    z-index: 40;
+    /* background-color: red; */
+  }
+  
+  .titulo h1{
+    width: 70%;
+    height: 50%;
+    font-size: 11vh;
+    text-align: center;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+  }
+  
+  .titulo h1 span{
+    color: red;
+    font-size: 13vh;
+    text-shadow: 5px 5px 10px black;
+    font-family: 'Russo One', sans-serif;
+  }
+  
+  /* Fin Hardware*/
+  /* Comienzo Hardware*/
+  #hardware {
     grid-area: "hardware";
     display: grid;
     grid-template-columns: 100%;
@@ -97,23 +117,23 @@ header{
     grid-area: "titulo" "seccion1" "seccion2" "seccion3" "seccion4";
     background-image: url(./Imagenes/Fondo\ Hardware\ Productos.svg);
     background-size: cover;
-}
-
-.texto{
+  }
+  
+  .texto {
     grid-area: "titulo";
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    & h2{
-        font-size: 3vw;
-        font-family: Oswald, sans-serif;
-        color: white;
-    }
-}
-
-.seccion1{
+  }
+  .texto h2 {
+    font-size: 3vw;
+    font-family: Oswald, sans-serif;
+    color: white;
+  }
+  
+  .seccion1 {
     grid-area: "seccion1";
     width: 100%;
     height: 100%;
@@ -121,121 +141,171 @@ header{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    & div{
-        height: 40vh;
-        width: 40vh;
-        background-color: red;
-    }
-}
-
-.seccion2{
+  }
+  .seccion1 div {
+    height: 40vh;
+    width: 40vh;
+    background-color: red;
+  }
+  
+  .seccion2 {
     grid-area: "seccion2";
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    & div{
-        height: 40vh;
-        width: 40vh;
-        background-color: red;
-    }
-}
-
-.seccion3{
+  }
+  .seccion2 div {
+    height: 40vh;
+    width: 40vh;
+    background-color: red;
+  }
+  
+  .seccion3 {
     grid-area: "seccion3";
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    & div{
-        height: 40vh;
-        width: 40vh;
-        background-color: red;
-    }
-}
-
-.seccion4{
+  }
+  .seccion3 div {
+    height: 40vh;
+    width: 40vh;
+    background-color: red;
+  }
+  
+  .seccion4 {
     grid-area: "seccion4";
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    & div{
-        height: 40vh;
-        width: 40vh;
-        background-color: red;
-    }
-}
-
-/* Fin Hardware*/
-
-
-/* Comienzo Footer */
-
-footer{
+  }
+  .seccion4 div {
+    height: 40vh;
+    width: 40vh;
+    background-color: red;
+  }
+  
+  /* Fin Hardware*/
+  /* Comienzo Footer */
+  footer {
     grid-area: footer;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
-    background-color: rgb(0, 89, 255);
-}
-
-.footer{
+    background-color: #0059ff;
+  }
+  
+  .footer {
     height: 80%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.footer1{
+  }
+  
+  .footer1 {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     width: 20%;
     height: 80%;
-    & h3{
-        font-size: 3vh;
-        text-decoration: underline;
-        color: white;
-    }
-    & h5{
-        text-decoration: none;
-        padding: 0.25vh 0vh;
-        font-size: 2.5vh;
-        color: white;
-    }
-    & a{
-        text-decoration: none;
-        & :hover{
-            text-decoration: underline;
-            text-decoration-color: white;
-        }
-    }
-}
-
-.formulario{
+  }
+  .footer1 h3 {
+    font-size: 3vh;
+    text-decoration: underline;
+    color: white;
+  }
+  .footer1 h5 {
+    text-decoration: none;
+    padding: 0.25vh 0vh;
+    font-size: 2.5vh;
+    color: white;
+  }
+  .footer1 a {
+    text-decoration: none;
+  }
+  .footer1 a :hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+  
+  .formulario {
     height: 80%;
     width: 100%;
     /* background-color: red; */
-}
-
-.redes{
+  }
+  
+  .redes {
     height: 20%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    & img{
-        height: 6vh;
-    }
-    & a :hover{
-        border: 2px solid rgb(158, 158, 158);
-        border-radius: 4vh;
-    }
-}
+  }
+  .redes img {
+    height: 6vh;
+  }
+  .redes a :hover {
+    border: 2px solid #9e9e9e;
+    border-radius: 4vh;
+  }
+  
+  /* Fin Footer */
+  
+  /*# sourceMappingURL=hardware.css.map */
+  
 
-/* Fin Footer */
+  // Media Querie 320px
+
+  @media only screen and (max-width: 767px ){
+
+    #contenedor{
+      grid-template-rows: 40px;
+    }
+
+
+  /* Comienzo Header */
+
+  header{
+    background-color: rgb(255, 255, 255);
+  }
+
+  .logo{
+    width: 20%;
+    height: 100%;
+  }
+
+  .logo img{
+    width: 80%;
+    height: 50%;
+  }
+
+  .nav{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .nav ul{
+    width: 100%;
+  }
+
+  .nav ul li{
+    font-size: 5px;
+  }
+
+  header ul :hover{
+    font-size: none;
+    text-decoration: none;
+  }
+
+  /* Fin Header */
+
+
+}

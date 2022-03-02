@@ -12,7 +12,7 @@ html {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 20vh 75vh 300vh 35vh;
-    grid-template-areas: "header" "inicio" "streaming" "footer";
+    grid-template-areas: "header" "inicio" "componentes" "footer";
 }
 
 /* Comienzo Header */
@@ -96,28 +96,20 @@ header {
 }
 
 .titulo h1{
-    width: 80%;
-    height: 50%;
+    width: 50vw;
+    height: 30%;
     font-size: 10vh;
     text-align: center;
     color: white;
     font-family: 'Russo One', sans-serif;
-    color: rgb(0, 225, 255);
+    color: rgb(123, 255, 0);
 }
-
-.titulo h1 span{
-    color: rgb(255, 0, 255);
-    font-size: 12vh;
-    text-shadow: 5px 5px 10px black;
-    font-family: 'Russo One', sans-serif;
-}
-
 /* Fin Hardware*/
 
 
 /* Comienzo Hardware*/
-#streaming{
-    grid-area: "streaming";
+#componentes{
+    grid-area: "componentes";
     width: 100%;
     height: 100%;
     display: grid;
@@ -266,15 +258,16 @@ footer {
 
 /* Fin Footer */
 
+
 @media only screen and (max-width: 767px) {
-    
+
     #contenedor {
-      grid-template-rows: 40px 118px 100vh 170px;
+    grid-template-rows: 40px 118px 100vh 170px;
     }
-  
+
     /* Comienzo Header */
     header {
-      background-color: white;
+    background-color: white;
     }
   
     .logo {
@@ -315,8 +308,8 @@ footer {
     .titulo{
       position: absolute;
       top: 40px;
-      left: 30px;
-      height: 80px;
+      left: 40px;
+      height: 95px;
       width: 50%;
       /* background-color: red; */
     }
@@ -338,8 +331,8 @@ footer {
   
     /* Comienzo Productos */
   
-    #streaming {
-      grid-area: "streaming";
+    #componentes {
+      grid-area: "componentes";
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
@@ -513,15 +506,15 @@ footer {
     .titulo{
       position: absolute;
       top: 70px;
-      left: 60px;
-      height: 190px;
+      left: 70px;
+      height: 205px;
       width: 50%;
       /* background-color: red; */
     }
   
     .titulo h1{
       height: 10%;
-      width: 90%;
+      width: 100%;
       font-size: 35px;
       align-items: center;
       /* background-color: beige; */
@@ -536,8 +529,8 @@ footer {
   
     /* Comienzo Productos */
   
-    #streaming {
-      grid-area: "streaming";
+    #componentes {
+      grid-area: "componentes";
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
@@ -669,6 +662,5 @@ footer {
   
     /* Fin Footer */
   }
-
 
 /*# sourceMappingURL=hardware.css.map */
