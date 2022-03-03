@@ -25,6 +25,7 @@ header {
   top: 0px;
   left: 0px;
   z-index: 50;
+  background-color: white;
 }
 
 .logo {
